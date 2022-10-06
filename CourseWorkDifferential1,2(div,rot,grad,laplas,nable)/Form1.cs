@@ -7,6 +7,9 @@ namespace CourseWorkDifferential1_2_div_rot_grad_laplas_nable_
             InitializeComponent();
         }
 
-       
+        private void Gradient(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
