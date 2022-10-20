@@ -7,34 +7,37 @@ using System.Threading.Tasks;
 namespace CourseWorkDifferential1_2_div_rot_grad_laplas_nable_
 {
 
-    internal class Operator
+    internal class Operator : Deriviative
     {
 
         public Operator() { }
-        public string Operate(Function function, string deriviate)
+        public Vector OperateGrad2D(Function function)
         {
-            switch (deriviate)
-            {
-                case "x":
-                    if (function.a == 0) return "0";
-                    if (function.alpha == 0) return "0";
-                    if (function.alpha == 1) return $"{function.a}*y^{function.beta}*z^{function.gamma}";
-                    else return $"{function.a * function.alpha}*x^{function.alpha - 1}*y^{function.beta}*z^{function.gamma}";
-                case "y":
-                    if (function.a == 0) return "0";
-                    if (function.beta == 0) return "0";
-                    if (function.beta == 1) return $"{function.a}*x^{function.alpha}*z^{function.gamma}";
-                    else return $"{function.a * function.beta}*x^{function.alpha}*y^{function.beta-1}*z^{function.gamma}";
+            Vector vector = new Vector();
 
-                case "z":
-                    if (function.a == 0) return "0";
-                    if (function.gamma == 0) return "0";
-                    if (function.gamma == 1) return $"{function.a}*x^{function.alpha}*y^{function.beta}";
-                    else return $"{function.a * function.gamma}*x^{function.alpha}*y^{function.beta}*z^{function.gamma-1}";
+            vector.I = Deriviate(function, "x");
+            vector.J = Deriviate(function, "y");
+            vector.K = Deriviate(function, "z");
+            return vector;
+        }
 
-            }
-            return "";
+        public Vector OperateDivCartezian(VectorFunction f)
+        {
 
+            Vector vector = new Vector();
+
+            vector.I = Deriviate(f.P, "x");
+            vector.J = Deriviate(f.Q, "y");
+            vector.K = Deriviate(f.R, "z");
+            return vector;
+
+
+
+        }
+
+        public string OperateCurl(VectorFunction f)
+        {
+            return $"{Deriviate(f.R, "y").FuncToString()} - {Deriviate(f.Q, "z").FuncToString()}   ;   {Deriviate(f.P, "z").FuncToString()} - {Deriviate(f.R, "x").FuncToString()} ; {Deriviate(f.Q, "x").FuncToString()} - {Deriviate(f.P, "y").FuncToString()} ";
         }
 
 

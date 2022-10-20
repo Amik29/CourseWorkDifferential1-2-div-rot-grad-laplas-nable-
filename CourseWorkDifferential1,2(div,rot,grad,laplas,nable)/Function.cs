@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CourseWorkDifferential1_2_div_rot_grad_laplas_nable_
 {
-    internal class Function//a*x^a*y^b*z^g
+    internal class Function : ICloneable
     {
         public double a { get; set; }
         public double alpha { get; set; }
@@ -20,5 +20,39 @@ namespace CourseWorkDifferential1_2_div_rot_grad_laplas_nable_
             this.beta = beta;
             this.gamma = gamma;
         }
+
+        public Function( Function f)
+        {
+            this.a = f.a;
+            this.alpha = f.alpha;
+            this.beta = f.beta;
+            this.gamma = f.gamma;
+        }
+        public object Clone()
+        {
+            return MemberwiseClone();
+        }
+        public string FuncToString() 
+        {
+            if (a == 0) return "0";
+            if (alpha == 0 && beta == 0 && gamma == 0) return "a";
+
+
+            else if (alpha == 0 && beta == 0 && gamma != 0) return $"{a} * z^{gamma}";
+            else if (alpha == 0 && beta != 0 && gamma == 0) return $"{a} * y^{beta}";
+            else if (alpha != 0 && beta == 0 && gamma == 0) return $"{a} * x^{alpha}";
+
+
+            else if (alpha != 0 && beta != 0 && gamma == 0) return $"{a} * x^{alpha} * y^{beta}";
+            else if (alpha != 0 && beta == 0 && gamma != 0) return $"{a} * x^{alpha} * z^{gamma}";
+            else if (alpha == 0 && beta != 0 && gamma != 0) return $"{a}* y^{beta}*z^{gamma}";
+
+
+            else if (alpha != 0 && beta != 0 && gamma != 0) return $"{a} * x^{alpha} * y^{beta} * z^{gamma}";
+            else return "";
+        }
+
+
+
     }
 }
