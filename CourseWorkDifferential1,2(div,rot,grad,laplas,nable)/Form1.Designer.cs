@@ -54,12 +54,12 @@
             this.R_beta = new System.Windows.Forms.TextBox();
             this.R_alpha = new System.Windows.Forms.TextBox();
             this.R_gamma = new System.Windows.Forms.TextBox();
-            this.Div_polar = new System.Windows.Forms.Button();
+            this.Div_Cylindr = new System.Windows.Forms.Button();
             this.Div_spherical = new System.Windows.Forms.Button();
             this.Rotor_Dekart = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.Curl_Cylindr = new System.Windows.Forms.Button();
+            this.Curl_Spherical = new System.Windows.Forms.Button();
+            this.Div_grad = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -271,14 +271,14 @@
             this.R_gamma.Size = new System.Drawing.Size(100, 23);
             this.R_gamma.TabIndex = 41;
             // 
-            // Div_polar
+            // Div_Cylindr
             // 
-            this.Div_polar.Location = new System.Drawing.Point(12, 282);
-            this.Div_polar.Name = "Div_polar";
-            this.Div_polar.Size = new System.Drawing.Size(143, 54);
-            this.Div_polar.TabIndex = 42;
-            this.Div_polar.Text = "Div(polar)";
-            this.Div_polar.UseVisualStyleBackColor = true;
+            this.Div_Cylindr.Location = new System.Drawing.Point(12, 282);
+            this.Div_Cylindr.Name = "Div_Cylindr";
+            this.Div_Cylindr.Size = new System.Drawing.Size(143, 54);
+            this.Div_Cylindr.TabIndex = 42;
+            this.Div_Cylindr.Text = "Div(polar)";
+            this.Div_Cylindr.UseVisualStyleBackColor = true;
             // 
             // Div_spherical
             // 
@@ -299,32 +299,32 @@
             this.Rotor_Dekart.UseVisualStyleBackColor = true;
             this.Rotor_Dekart.Click += new System.EventHandler(this.Rotor_Dekart_Click);
             // 
-            // button2
+            // Curl_Cylindr
             // 
-            this.button2.Location = new System.Drawing.Point(223, 282);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(143, 54);
-            this.button2.TabIndex = 45;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.Curl_Cylindr.Location = new System.Drawing.Point(223, 282);
+            this.Curl_Cylindr.Name = "Curl_Cylindr";
+            this.Curl_Cylindr.Size = new System.Drawing.Size(143, 54);
+            this.Curl_Cylindr.TabIndex = 45;
+            this.Curl_Cylindr.Text = "button2";
+            this.Curl_Cylindr.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // Curl_Spherical
             // 
-            this.button3.Location = new System.Drawing.Point(223, 342);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(143, 54);
-            this.button3.TabIndex = 46;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.Curl_Spherical.Location = new System.Drawing.Point(223, 342);
+            this.Curl_Spherical.Name = "Curl_Spherical";
+            this.Curl_Spherical.Size = new System.Drawing.Size(143, 54);
+            this.Curl_Spherical.TabIndex = 46;
+            this.Curl_Spherical.Text = "button3";
+            this.Curl_Spherical.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // Div_grad
             // 
-            this.button4.Location = new System.Drawing.Point(584, 222);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(143, 54);
-            this.button4.TabIndex = 47;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.Div_grad.Location = new System.Drawing.Point(584, 222);
+            this.Div_grad.Name = "Div_grad";
+            this.Div_grad.Size = new System.Drawing.Size(143, 54);
+            this.Div_grad.TabIndex = 47;
+            this.Div_grad.Text = "Div(grad F)";
+            this.Div_grad.UseVisualStyleBackColor = true;
             // 
             // button5
             // 
@@ -359,12 +359,12 @@
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.Div_grad);
+            this.Controls.Add(this.Curl_Spherical);
+            this.Controls.Add(this.Curl_Cylindr);
             this.Controls.Add(this.Rotor_Dekart);
             this.Controls.Add(this.Div_spherical);
-            this.Controls.Add(this.Div_polar);
+            this.Controls.Add(this.Div_Cylindr);
             this.Controls.Add(this.R_gamma);
             this.Controls.Add(this.R_alpha);
             this.Controls.Add(this.R_beta);
@@ -425,12 +425,12 @@
         private TextBox R_beta;
         private TextBox R_alpha;
         private TextBox R_gamma;
-        private Button Div_polar;
+        private Button Div_Cylindr;
         private Button Div_spherical;
         private Button Rotor_Dekart;
-        private Button button2;
-        private Button button3;
-        private Button button4;
+        private Button Curl_Cylindr;
+        private Button Curl_Spherical;
+        private Button Div_grad;
         private Button button5;
         private Button button6;
         private Button button7;

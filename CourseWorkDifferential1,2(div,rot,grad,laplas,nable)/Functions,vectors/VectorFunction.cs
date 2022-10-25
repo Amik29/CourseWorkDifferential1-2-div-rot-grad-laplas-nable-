@@ -11,14 +11,12 @@ namespace CourseWorkDifferential1_2_div_rot_grad_laplas_nable_
         Function p;
         Function q;
         Function r;
-
         public VectorFunction (Function p, Function q, Function r)
         {
             this.p = p;
             this.q = q;
             this.r = r;
         }
-
         public Function P
         {
             get { return p; }

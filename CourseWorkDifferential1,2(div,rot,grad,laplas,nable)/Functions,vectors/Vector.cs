@@ -11,7 +11,6 @@ namespace CourseWorkDifferential1_2_div_rot_grad_laplas_nable_
         Function i;
         Function j;
         Function k;
-
         public Function I
         {
             get { return i; }
@@ -22,7 +21,6 @@ namespace CourseWorkDifferential1_2_div_rot_grad_laplas_nable_
             get { return j; }
             set { j = value; }
         }
-
         public Function K
         {
             get { return k; }

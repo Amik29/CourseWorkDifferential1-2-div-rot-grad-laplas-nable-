@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CourseWorkDifferential1_2_div_rot_grad_laplas_nable_
 {
-    internal class Function : ICloneable
+    internal class Function
     {
         public double a { get; set; }
         public double alpha { get; set; }
@@ -28,10 +28,6 @@ namespace CourseWorkDifferential1_2_div_rot_grad_laplas_nable_
             this.beta = f.beta;
             this.gamma = f.gamma;
         }
-        public object Clone()
-        {
-            return MemberwiseClone();
-        }
         public string FuncToString() 
         {
             if (a == 0) return "0";
@@ -51,8 +47,6 @@ namespace CourseWorkDifferential1_2_div_rot_grad_laplas_nable_
             else if (alpha != 0 && beta != 0 && gamma != 0) return $"{a} * x^{alpha} * y^{beta} * z^{gamma}";
             else return "";
         }
-
-
 
     }
 }

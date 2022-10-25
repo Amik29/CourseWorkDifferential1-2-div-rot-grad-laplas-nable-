@@ -4,18 +4,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CourseWorkDifferential1_2_div_rot_grad_laplas_nable_
+namespace CourseWorkDifferential1_2_div_rot_grad_laplas_nable_.Operators
 {
-    internal class Deriviative
+    internal class Deriviative : IDiffOperator
     {
-        public Function Deriviate(Function function, string deriviate)
+        public Function FunctionOperate(Function f)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Function FunctionOperate(Function function, string deriviate)
         {
             Function function1 = new Function(function);
 
             switch (deriviate)
             {
                 case "x":
-                    if (function.a == 0 || function.alpha == 0) function1.a = 0 ;
+                    if (function.a == 0 || function.alpha == 0) function1.a = 0;
 
                     else if (function.alpha == 1) function1.alpha = 0;
 
@@ -41,13 +46,9 @@ namespace CourseWorkDifferential1_2_div_rot_grad_laplas_nable_
             return function1;
         }
 
-
-        
-
-
-
-
-
-
+        public Vector VectorOperate(Function f)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
